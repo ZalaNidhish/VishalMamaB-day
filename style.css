@@ -1,0 +1,245 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    overflow: hidden;
+}
+
+.container{
+    height: 100%;   
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:radial-gradient(rgba(255, 213, 242, 0.696),rgba(220, 186, 255, 0.61));
+}
+
+.pointer{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    z-index: 999;
+    background-color: transparent;
+    top: -4vh;
+    right: -4vh;
+}
+
+.pointer img{
+    height: 70px;
+}
+
+.pointerAni{
+    animation: pointer 3s infinite;
+}
+
+@keyframes pointer {
+    0%{
+        top:50%;
+        right:50%;
+    }
+    30%{
+        top:45%;
+        right:52%;
+    }
+    50%{
+        top:50%;
+        right:50%;
+    }
+    75%{
+        top:45%;
+        right:52%;
+    }
+    100%{
+        top:50%;
+        right:50%;
+    }
+}
+
+
+.card{
+    height: 65vh;
+    width: 80%;
+    position:relative;
+    perspective: 1000px;
+}
+
+.page{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    /* transition: 1s; */
+    transform-origin: left;
+    position: absolute;
+    border-radius: 0 40px 40px 0 ;
+    box-shadow: 2px 0 16px rgba(66, 66, 66, 0.459);
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+}
+
+#page1{
+    perspective: 1000px;
+    z-index: 6;
+    padding: 2vh;
+}
+
+#page1 h2{
+    text-align: center;
+    background: linear-gradient(to right, rgb(255, 111, 0) , yellow);
+    border-radius: 2px;
+    padding: 1vh 2vw;
+    color: rgb(56, 13, 96);
+    font-size: 50px;
+}
+
+#page1 h3{
+    text-align: center;
+    color: red;
+    font-family: cursive;
+    margin: 2vh;
+    font-size: 50px;
+}
+.imgcontainer{
+    height:30vh;
+    width: fit-content;
+    overflow: hidden;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page1 .imgcontainer img{
+    width: 92%;
+    background-position:left;
+    border-radius: 20px;
+}
+
+
+
+#page2{
+    perspective: 1000px;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .msg{
+    height: fit-content;
+    width: 80%;
+}
+
+#page2 .msg h3{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    word-spacing: 7px;
+    font-size: 45px;
+}
+
+#page3{
+    perspective: 1000px;
+    z-index: 4;
+}
+
+#page3 h4{   
+    height: 650px;
+    font-size: 35px;
+}
+
+#page3 .imgcontainer{
+    width: 90%;
+    height: 70vh;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+#page3 .imgcontainer img{
+    width:650px;
+    border-radius: 20px;
+}
+
+#page4{
+    perspective: 1000px;
+    z-index: 3;
+}
+
+#page4 h4{   
+    height: 350px;
+    font-size: 35px;
+}
+
+
+#page4 .imgcontainer img{
+    width:350px;
+    height: auto;
+    padding-left: 12px;
+    border-radius: 20px;
+}
+
+#page5{
+    perspective: 1000px;
+    z-index: 2;
+}
+
+#page5 .imgcontainer{
+    flex-direction: column;
+    gap: 60px;
+    height: 900px;
+}
+
+#page5 .imgcontainer img{
+    height: 400px;
+    border-radius: 20px;
+}
+
+#page5 h4{   
+    height: 250px;
+    font-size: 35px;
+}
+
+h4{
+    padding: 4vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(51, 11, 88);
+    text-align: center;
+}
+
+#page6{
+    perspective: 1000px;
+    z-index: 1;
+}
+
+#page6 .imgcontainer{
+    width: 90%;
+    height:90%;
+    flex-direction: column;
+    gap: 90px;
+}
+
+#page6 .imgcontainer img{
+    width: 400px;
+    border-radius: 20px;
+}
+
+
+.flip{
+    transform: rotateY(-180deg);
+    perspective: 1000px;
+    transition: 1s;
+}
+
+.home{
+    transform: rotateY(0deg);
+    perspective: 1000px;
+}
+
